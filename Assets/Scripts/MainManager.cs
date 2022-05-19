@@ -15,7 +15,7 @@ public class MainManager : MonoBehaviour
     public Text ScoreText;
     public Text highestScoreText;
     public GameObject GameOverText;
-    public Button mainMenuButton;
+    
     public string playerName;
     public string highestScorePlayerName;
 
@@ -86,7 +86,6 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
-        mainMenuButton.gameObject.SetActive(true);
         if (m_Points > PersistantData.instance.highestScore)
         {
             PersistantData.instance.highestScorePlayerName = playerName;
